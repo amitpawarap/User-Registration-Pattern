@@ -49,7 +49,7 @@ fi
 #validate password 
 echo "Enter the Password:";
 read PASSWORD;
-PAT4="[0-9a-zA-Z]{8,}$";
+PAT4="(^[a-zA-Z][0-9])([A-Z])";
 if [[ $PASSWORD =~ $PAT4 ]]
 then
 echo "Password Is Valid";
