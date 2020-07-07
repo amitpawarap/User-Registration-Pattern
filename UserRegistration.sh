@@ -11,4 +11,15 @@ else
 echo "FirstName Is Not Valid";
 fi
 
+#validate last name
+echo "Enter The LastName:"
+read LNAME;
+PAT1="^[A-Z]{1}[a-z]{2,}$";
+if [[ $LNAME =~ $PAT1 ]]
+then
+echo "LastName Is Valid";
+else
+echo "LastName Is Not Valid";
+fi
+
 
