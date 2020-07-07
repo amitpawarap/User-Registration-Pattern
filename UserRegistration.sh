@@ -22,4 +22,14 @@ else
 echo "LastName Is Not Valid";
 fi
 
+#validate email id
+echo "Enter Email Id:"
+read EMAIL;
+PAT2="^[0-9a-zA-Z]+([+_-.][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z,]{2,4}([.][0-9a-zA-Z,]{2})";
 
+if [[ $EMAIL =~ $PAT2 ]]
+then
+        echo "Email Is Valid";
+else
+        echo "Email Is Not Valid";
+fi
