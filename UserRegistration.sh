@@ -37,7 +37,7 @@ fi
 #validate Phone Number
 echo "Enter The Phone Number:"
 read PNUMBER;
-PAT3="^[+0-9]{2,3} [ ]?[0-9]{10}$";
+PAT3="^[1-9]{2} [ ]?[0-9]{10}$";
 
 if [[ $PNUMBER =~ $PAT3 ]]
 then
@@ -46,3 +46,13 @@ else
 echo "Phone Number Is Not Valid";
 fi
 
+#validate password 
+echo "Enter the Password:";
+read PASSWORD;
+PAT4="(^[a-zA-Z][!^@#$&][0-9])([A-Z])([!@#$&^])";
+if [[ $PASSWORD =~ $PAT4 ]]
+then
+echo "Password Is Valid";
+else
+echo "Password Is Not Valid";
+fi
